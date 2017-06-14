@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=200, initial-scale=1">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-left">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">My Timesheet</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Today</a></li>
+                    <li><a href="#about">Week</a></li>
+                    <li><a href="#contact">Month</a></li>
+                    <li><a href="#contact">Year</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- PANEL SUMMARY -->
+        <div class="row panelrow">
+            <div class="col-sm-4">
+            </div>
+
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Today's Summary</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Started:</strong> <span>08:45</span> </li>
+                            <li class="list-group-item"><strong>Finished:</strong> <span>----</span></li>
+                            <li class="list-group-item"><strong>Total:</strong> <span>09:15</span></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="button" class="btn btn-lg btn-primary">Start/Finish</button>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+            </div>
+        </div>
+
+        <!-- PANEL TRACKED TIME -->
+        <div class="row panelrow">
+            <div class="col-sm-4">
+            </div>
+
+            <div class="col-sm-4">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading ">
+                        <span class="panel-title">Today's Tracked Periods</span>
+                        <span class="pull-right"> <button type="button" class="btn btn-xs btn-success"> ADD </button></span>
+                    </div>
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Started</th>
+                                <th>Finished</th>
+                                <th>Period</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!--IN ORDER TO COLLAPSE, use: class="collapse out/in"-->
+                                <td>08:45</td>
+                                <td>12:00</td>
+                                <td>03:15</td>
+                            </tr>
+                            <tr>
+                                <form class="form-group">
+                                    <td class="tracked-periods-table-input-td"><input class="form-control" aria-label="Started Time" type="text" value="13:00"></td>
+                                    <td class="tracked-periods-table-input-td"><input class="form-control" aria-label="Finished Time" type="text" value="15:00"></td>
+                                    <td class="tracked-periods-table-input-td text-right vertical-middle"><button type="button" class="btn btn-xs btn-success"> SAVE </button></td>
+                                </form>
+                            </tr>
+                            <tr>
+                                <td class="text-right " colspan="3">
+                                    <button type="button" class="btn btn-xs btn-primary"> EDIT </button>
+                                    <button type="button" class="btn btn-xs btn-danger"> DELETE </button>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>17:00</td>
+                                <td>(still counting)</td>
+                                <td>02:38</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
